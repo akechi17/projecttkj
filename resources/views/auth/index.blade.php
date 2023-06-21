@@ -14,8 +14,9 @@
                 <h2 class="font-bold text-2xl text-[#44547a]">Login</h2>
                 <p class="text-sm mt-4 text-[#44547a]">Welcome to SMKN 1 Cibinong login page</p>
                 
-                <form action="" class="flex flex-col gap-4">
-                    <input class="p-2 mt-8 rounded-xl border" type="text" name="username" placeholder="Username">
+                <form action="{{ route('login') }}" method="POST" class="flex flex-col gap-4">
+                    @csrf
+                    <input class="p-2 mt-8 rounded-xl border" type="email" name="email" placeholder="Email">
                     <div class="relative">
                         <input id="password" class="p-2 rounded-xl border w-full" type="password" name="password" placeholder="Password">
                         <img id="eye-icon" src="images/eye.svg" class="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer" alt="" onclick="togglePassword()">
